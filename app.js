@@ -28,5 +28,4 @@ app.post('/calculate-bmi', (req, res) => {
   res.send(`BMI: ${bmi.toFixed(2)} (${category})`);
 });
 
-
 app.listen(3000, () => console.log('OK'));
