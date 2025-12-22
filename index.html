@@ -1,21 +1,72 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>BMI Calculator</title>
-    <link rel="stylesheet" href="/style.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>API Demo Dashboard</title>
+    <link rel="stylesheet" href="/styles.css">
 </head>
 
 <body>
-    <div class="card">
-        <h2>BMI Calculator</h2>
-        <form action="/calculate-bmi" method="POST">
-            <input type="number" step="0.1" name="weight" placeholder="Weight (kg)" required>
-            <input type="number" step="1" name="height" placeholder="Height (cm)" required>
-            <button type="submit">Calculate</button>
-        </form>
-    </div>
+    <header>
+        <h1>API Demo Dashboard</h1>
+        <p>Click any button to view that API's page (server does data fetching).</p>
+    </header>
+
+    <main id="app">
+        <section id="home" class="view active">
+            <div class="buttons-grid">
+                <button data-view="random" class="btn btn-random">Random User</button>
+                <button data-view="country" class="btn btn-country">Country Info</button>
+                <button data-view="exchange" class="btn btn-exchange">Exchange Rate</button>
+                <button data-view="news" class="btn btn-news">News Headlines</button>
+            </div>
+            <p class="hint">All API calls are routed through the Node.js backend (logic lives on the server).</p>
+        </section>
+
+        <section id="random" class="view">
+            <nav class="subnav"><button class="back">← Back</button><button class="refresh">Get New User</button></nav>
+            <div id="random-container" class="page random-style"></div>
+        </section>
+
+        <section id="country" class="view">
+            <nav class="subnav"><button class="back">← Back</button><button class="fetch-from-user">Use Last
+                    User</button></nav>
+            <form id="country-form" class="small-form">
+                <label>Country name <input name="country" placeholder="e.g. France"></label>
+                <label>Country code (2-letter) <input name="code" placeholder="e.g. fr"></label>
+                <button type="submit">Get Country</button>
+            </form>
+            <div id="country-container" class="page country-style"></div>
+        </section>
+
+        <section id="exchange" class="view">
+            <nav class="subnav"><button class="back">← Back</button><button class="fetch-from-country">Use Last
+                    Country</button></nav>
+            <form id="exchange-form" class="small-form">
+                <label>Currency code <input name="currency" placeholder="e.g. EUR"></label>
+                <button type="submit">Get Rates</button>
+            </form>
+            <div id="exchange-container" class="page exchange-style"></div>
+        </section>
+
+        <section id="news" class="view">
+            <nav class="subnav"><button class="back">← Back</button><button class="fetch-from-user">Use Last
+                    User</button></nav>
+            <form id="news-form" class="small-form">
+                <label>Country name <input name="country" placeholder="e.g. France"></label>
+                <button type="submit">Get News</button>
+            </form>
+            <div id="news-container" class="page news-style"></div>
+        </section>
+    </main>
+
+    <footer>
+        <small>Server-side APIs: RandomUser, RestCountries (via server), ExchangeRate, NewsAPI</small>
+    </footer>
+
+    <script src="/script.js"></script>
 </body>
 
 </html>
