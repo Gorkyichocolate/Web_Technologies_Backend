@@ -4,83 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <title>BMI Calculator</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #eed2d2;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-
-        .card {
-            background: #e3dddd;
-            padding: 25px;
-            border-radius: 10px;
-            width: 320px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        }
-
-        h2 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        input,
-        button {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 12px;
-            font-size: 16px;
-            border-radius: 6px;
-            border: 1px solid #ccc;
-        }
-
-        button {
-            background: #007bff;
-            color: #fff;
-            border: none;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background: #0056b3;
-        }
-
-        .error {
-            color: red;
-            text-align: center;
-            margin-bottom: 10px;
-        }
-
-        .result {
-            text-align: center;
-            padding: 10px;
-            border-radius: 6px;
-            font-weight: bold;
-        }
-
-        .underweight {
-            background: #cce5ff;
-        }
-
-        .normal {
-            background: #c8f7c5;
-        }
-
-        .overweight {
-            background: #fff3b0;
-        }
-
-        .obese {
-            background: #f7c5c5;
-        }
-    </style>
+    <link rel="stylesheet" href="/style.css">
 </head>
 
 <body>
-
     <div class="card">
         <h2>BMI Calculator</h2>
         <form action="/calculate-bmi" method="POST">
@@ -89,7 +16,6 @@
             <button type="submit">Calculate</button>
         </form>
     </div>
-
 </body>
 
 </html>
