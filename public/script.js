@@ -88,6 +88,7 @@
         <div>
           <h3 style="margin:0"><a href="${a.url}" target="_blank" rel="noopener" style="color:inherit">${a.title}</a></h3>
           <p class="muted" style="margin:6px 0">${a.description || ''}</p>
+          <p class="muted" style="margin:6px 0">${a.date || ''}</p>
         </div>
       `;
             list.appendChild(item);

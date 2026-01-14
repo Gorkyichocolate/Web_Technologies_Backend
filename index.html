@@ -11,7 +11,6 @@
 <body>
     <header>
         <h1>API Demo Dashboard</h1>
-        <p>Click any button to view that API's page (server does data fetching).</p>
     </header>
 
     <main id="app">
@@ -22,7 +21,6 @@
                 <button data-view="exchange" class="btn btn-exchange">Exchange Rate</button>
                 <button data-view="news" class="btn btn-news">News Headlines</button>
             </div>
-            <p class="hint">All API calls are routed through the Node.js backend (logic lives on the server).</p>
         </section>
 
         <section id="random" class="view">
@@ -61,10 +59,6 @@
             <div id="news-container" class="page news-style"></div>
         </section>
     </main>
-
-    <footer>
-        <small>Server-side APIs: RandomUser, RestCountries (via server), ExchangeRate, NewsAPI</small>
-    </footer>
 
     <script src="/script.js"></script>
 </body>

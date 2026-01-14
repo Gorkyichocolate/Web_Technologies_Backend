@@ -107,7 +107,7 @@ app.get('/exchange-rate', async (req, res) => {
 
   try {
     const { data } = await axios.get(
-      `https://v6.exchangerate-api.com/v6/${process.env.EXCHANGERATE_API_KEY}/latest/${currency}`
+      `https://v6.exchangerate-api.com/v6/${process.env.EXCHANGE_RATE_API_KEY}/latest/${currency}`
     );
 
     res.json({
@@ -147,7 +147,8 @@ app.get('/news', async (req, res) => {
       title: a.title,
       description: a.description,
       url: a.url,
-      image: a.urlToImage
+      image: a.urlToImage,
+      date: a.publishedAt
     }));
 
     res.json(news);
