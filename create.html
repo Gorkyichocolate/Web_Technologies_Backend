@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Blog — Создать</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body id="create-page">
+    <header class="nav">
+        <a class="nav-left" href="/">Blog</a>
+        <nav class="nav-right">
+            <a class="create-link" href="/create">Создать +</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1>Создать новость</h1>
+        <form id="postForm" class="post-form" enctype="multipart/form-data">
+            <label>Title<input name="title" required></label>
+            <label>Author<input name="author" required></label>
+            <label>Description<textarea name="description" required></textarea></label>
+            <label>Date<input type="date" name="date" required></label>
+            <label>Image<input type="file" name="image" accept="image/*" /></label>
+            <div class="form-actions">
+                <button type="submit">Создать</button>
+                <a class="btn-cancel" href="/">Отмена</a>
+            </div>
+        </form>
+    </main>
+
+    <script src="/script.js"></script>
+</body>
+
+</html>
