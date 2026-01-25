@@ -293,6 +293,21 @@ body {
     font-weight: 600
 }
 
+.card-id {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    font-size: 11px;
+    color: #999;
+    font-family: monospace;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.card:hover .card-id {
+    opacity: 1;
+}
+
 @media (max-width:640px) {
     .nav-right a {
         font-size: 14px

@@ -36,7 +36,7 @@
                     card.className = 'card';
                     card.innerHTML = `
             ${p.image ? `<img src="${p.image}" alt="">` : ''}
-            <div class="three-dots">⋮</div>
+            <div class="three-dots" title="ID: ${p._id}">⋮</div>
             <div class="menu">
               <button data-action="edit" data-id="${p._id}">Обновить</button>
               <button data-action="delete" data-id="${p._id}">Удалить</button>
@@ -44,6 +44,7 @@
             <div class="title">${escapeHtml(p.title)}</div>
             <div class="meta"><div class="author">${escapeHtml(p.author)} • ${new Date(p.date).toLocaleDateString()}</div></div>
             <p>${escapeHtml(p.description)}</p>
+            <div class="card-id">ID: ${p._id}</div>
           `;
                     container.appendChild(card);
 

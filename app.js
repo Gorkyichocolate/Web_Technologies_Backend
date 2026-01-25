@@ -93,6 +93,17 @@ app.get('/posts', async (req, res) => {
   }
 });
 
+app.get('/posts/:id', async (req, res) => {
+  try {
+    const { id } = req.params;
+    const post = await Post.findById(id);
+    if (!post) return res.status(404).json({ error: 'Post not found' });
+    res.json(post);
+  } catch (err) {
+    res.status(500).json({ error: 'Failed to fetch post' });
+  }
+});
+
 app.post('/posts', upload.single('image'), async (req, res) => {
   try {
     const { title, author, description, date } = req.body;
